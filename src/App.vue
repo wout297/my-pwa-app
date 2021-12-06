@@ -39,6 +39,7 @@
 
     <v-main>
       <HelloWorld/>
+      <button v-if="updateAvailable">Click to update</button>
     </v-main>
   </v-app>
 </template>
@@ -53,8 +54,22 @@ export default {
     HelloWorld,
   },
 
+  created() {
+    document.addEventListener(
+      'swupdatefound', this.updateTheApp, { once: true }
+    );
+  },
+
+  methods: {
+    updateTheApp(e) {
+      this.registration = e.detail;
+      this.updateAvailable = true;
+    }
+  },
+
   data: () => ({
-    //
+    registration: null,
+    updateAvailable: false,
   }),
 };
 </script>

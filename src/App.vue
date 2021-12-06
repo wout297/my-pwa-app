@@ -38,7 +38,7 @@
     </v-app-bar>
 
     <v-main>
-      <HelloWorld/>
+      <h1>This is my Cool PWA</h1>
       <button v-if="updateAvailable">Click to update</button>
     </v-main>
   </v-app>

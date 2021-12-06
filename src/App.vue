@@ -39,7 +39,7 @@
 
     <v-main>
       <h1>This is my Cool PWA</h1>
-      <button v-if="updateAvailable" @click="update">Click to update</button>
+      <v-btn v-if="updateAvailable" @click="update">Click to update</v-btn>
       <p>This site is created by Wout Peirens @ VIVES</p>
     </v-main>
   </v-app>

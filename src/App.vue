@@ -4,6 +4,7 @@
       <h1>This is my Cool PWA</h1>
       <v-btn v-if="updateAvailable" @click="update">Click to update</v-btn>
       <p>This site is created by Wout Peirens @ VIVES</p>
+      <p>new paragraphs</p>
     </v-main>
   </v-app>
 </template>

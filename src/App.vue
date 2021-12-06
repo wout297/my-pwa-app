@@ -54,7 +54,7 @@ export default {
     registration: null,
     updateAvailable: false,
   }),
-  
+
   components: {
     
   },
@@ -69,9 +69,15 @@ export default {
     updateTheApp(e) {
       this.registration = e.detail;
       this.updateAvailable = true;
-    }
+    },
+    // Actual update
+    update(){
+      this.updateAvailable = false;
+      // Lazy evaluation
+      if (this.registration || this.registration.waiting) {
+        this.registration.waiting.postMessage({type:'SKIP_WAITING'});
+      }
+    },
   },
-
-  
 };
 </script>

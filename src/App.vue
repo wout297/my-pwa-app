@@ -5,6 +5,7 @@
       <v-btn v-if="updateAvailable" @click="update">Click to update</v-btn>
       <p>This site is created by Wout Peirens @ VIVES</p>
       <p>new paragraphs</p>
+      <p>This was a demo for mobile apps</p>
     </v-main>
   </v-app>
 </template>

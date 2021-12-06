@@ -40,6 +40,7 @@
     <v-main>
       <h1>This is my Cool PWA</h1>
       <button v-if="updateAvailable">Click to update</button>
+      <p>This site is created by Wout</p>
     </v-main>
   </v-app>
 </template>
@@ -49,6 +50,11 @@
 export default {
   name: 'App',
 
+  data: () => ({
+    registration: null,
+    updateAvailable: false,
+  }),
+  
   components: {
     
   },
@@ -66,9 +72,6 @@ export default {
     }
   },
 
-  data: () => ({
-    registration: null,
-    updateAvailable: false,
-  }),
+  
 };
 </script>
